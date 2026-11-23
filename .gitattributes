@@ -1,1 +1,4 @@
+* text=auto eol=lf
 *.cmd text eol=crlf
+skills/** -text
+*.woff2 binary
