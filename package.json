@@ -1,0 +1,58 @@
+{
+  "name": "audit-desk",
+  "version": "0.1.10",
+  "description": "Local code audit and software testing desktop workbench",
+  "author": "Audit Desk",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc && node scripts/copy-assets.cjs",
+    "start": "npm run build && electron .",
+    "test": "npm run build && node --test tests/*.test.cjs",
+    "test:ui": "npm run build && node scripts/ui-check.cjs",
+    "pack": "npm run build && electron-builder --win dir",
+    "dist": "npm run build && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "docx": "9.15.3",
+    "ignore": "^7.0.5",
+    "playwright": "^1.56.0"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "electron": "^45.3.1",
+    "electron-builder": "^26.0.12",
+    "mermaid": "^12.3.0",
+    "typescript": "^5.9.3"
+  },
+  "build": {
+    "appId": "local.auditdesk.app",
+    "productName": "Audit Desk",
+    "directories": {
+      "output": "release/0.1.10"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "skills",
+        "to": "skills"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  }
+}

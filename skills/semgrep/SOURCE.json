@@ -1,0 +1,9 @@
+{
+  "id": "semgrep",
+  "repo": "trailofbits/skills",
+  "path": "plugins/static-analysis/skills/semgrep",
+  "sha": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "source": "https://github.com/trailofbits/skills/tree/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/static-analysis/skills/semgrep",
+  "license": "CC-BY-SA-4.0",
+  "repositoryStars": 8142
+}

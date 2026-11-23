@@ -1,0 +1,95 @@
+[
+  {
+    "id": "webapp-testing",
+    "repo": "anthropics/skills",
+    "path": "skills/webapp-testing",
+    "sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+    "source": "https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/webapp-testing",
+    "license": "Apache-2.0",
+    "repositoryStars": 193256,
+    "files": {
+      "examples/console_logging.py": "ea46877289acb82da7e7ce59d0bc37c8977cd57e2a006d0c88d7a1c625bf95da",
+      "examples/element_discovery.py": "d63c89604a22f8845d724e95dda45db49b1bf57c25ce0a83afbb7b8da3d402f0",
+      "examples/static_html_automation.py": "9d533aafb875ee3ab8b8ebf8f5b9003ac8d999da3d09b285cce252e623140064",
+      "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "scripts/with_server.py": "b0dcf4918935b795f4eda9821579b9902119235ff4447f687a30286e7d0925fd",
+      "SKILL.md": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+      "SOURCE.json": "d0601cb732905f4b61f752c2410ee571ba24baffd99809e3380d486b88cebfeb",
+      "UPSTREAM-LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362"
+    }
+  },
+  {
+    "id": "test-driven-development",
+    "repo": "obra/superpowers",
+    "path": "skills/test-driven-development",
+    "sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "source": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/test-driven-development",
+    "license": "MIT",
+    "repositoryStars": 316383,
+    "files": {
+      "SKILL.md": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "SOURCE.json": "b582036e790c9a7398ca6c48e60b9a29be8e62888719a38f04b5b8df243de879",
+      "UPSTREAM-LICENSE.txt": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "writing-good-tests.md": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1"
+    }
+  },
+  {
+    "id": "semgrep",
+    "repo": "trailofbits/skills",
+    "path": "plugins/static-analysis/skills/semgrep",
+    "sha": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+    "source": "https://github.com/trailofbits/skills/tree/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/static-analysis/skills/semgrep",
+    "license": "CC-BY-SA-4.0",
+    "repositoryStars": 8142,
+    "files": {
+      "agents/openai.yaml": "b200a52900687f8176cb5d8230a29e5e80c8317337efcdcf87754e892129cd89",
+      "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+      "references/rulesets.md": "e641bf7b2f32cd81b2623759f72a560dd96f6747f1295157f2984fe8ebac3f74",
+      "references/scan-modes.md": "99ed0ffb9e9ee68bcb175da469f1310f28f96e356c69c65918a0afc430027d3d",
+      "scripts/merge_sarif.py": "8b6094e18a0e4d36250c72c81903edac914552df7eb2a7eebd1ac449d105f7ba",
+      "scripts/run-scans.sh": "ac3d815dbd5cdfa0419596411058378ab659bd243c7dc87495114e773aa40347",
+      "scripts/test_merge_sarif.py": "8f235bface6ff37f813c1a44b2a6c2edf273cd548b95b770c362f0a443473c75",
+      "SKILL.md": "52162605593f871cf45f48f9cf00b7c2d7e0759ccb7507981088442b7cc5d76c",
+      "SOURCE.json": "b7b3693265db43be3b78981d405c7cd21e6b72495d319fac0d7eb56b4c9e46ac",
+      "UPSTREAM-LICENSE.txt": "7abe19ec9bb73b36141b999b861d24ad855e808bafe0f81e84cce28556f6c297",
+      "workflows/scan-workflow.md": "ddb630d34a51a749157140d71fd05044b09301352126f2c169a3119d5eb1d1a4"
+    }
+  },
+  {
+    "id": "security-audit",
+    "source": "C:\\Users\\30894\\.codex\\skills\\security-audit",
+    "license": "Local user-provided copy; no redistribution license identified",
+    "files": {
+      "AI-AND-LLM.md": "7335a95c43554eadefcf03ece639291bb0e038c398a179299e3887ffe06bd2ef",
+      "ATTACK-CLASSES.md": "3ee4f00c6e8c9dcf6dd02dd5ac2a4ceb322e2085f3e9fbe79cf0c6330bc7ef83",
+      "CLIENT-SIDE.md": "613f6b98f86083e045525c5b60154ffdab122bac35f1e05eb17488e6e453370c",
+      "CLOUD-AND-DEPLOYMENT.md": "3c80f3088be22345e07b057c056d6ed99fe2b0304f794398964f7ccd5a496ca3",
+      "DATA-ISOLATION-AND-LIFECYCLE.md": "307dcb3e24d292715c4a041190e7bb135646a37eb6187619ae01d000a634a4ad",
+      "DESKTOP-MOBILE-AND-LOCAL-IPC.md": "58eae8ee0ca6a46611c501ec5a3ab47fdff88dd7db0d8d74789bbf8bb19d8cb2",
+      "HUNTING.md": "71c121decea1322c47c718f6e110f1a892980bb4266bd7ac55ef043a213ade09",
+      "MEMORY-SAFETY-AND-BINARY.md": "7c8b0dccfb35315cca2455509674d49632b2fe37e1f3aac16c1a496a7e9924a7",
+      "PROTOCOLS-RPC-AND-MESSAGING.md": "8b73816fa5b3697c9c40977f0c836b40f01d6e81929ff2720fe83ce089e9a619",
+      "RECONNAISSANCE.md": "02ca887aca84de8ae137f1891bd2f0a54f28d3fa6da92a27f54734382b3381a2",
+      "report-schema.json": "6575c9de4a62255699ea052ebf9a49ebfb373a32891bcd89af6f55cc84b35519",
+      "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md": "4326fab5c92a0b4c420a70196254040105cd794026562130b59bf1a6db3e4baa",
+      "SKILL.md": "5e3e96a1e438d8f35fef0a1e38f02d4f00e2bdf910401b7dfe00e6779c6dac85",
+      "SOURCE.json": "44d10bdb945e0e0f385e5d6798a749cbc6bc53c04e30bc1169eeaa2896c8e3d7",
+      "SUPPLY-CHAIN-AND-RELEASE.md": "f372e919940e335468ba1ae09f99026c3986a345f7fe26f8068f132e199f52a5",
+      "validate-coverage-ledger.cjs": "2eb280bd2e33c002916f86db9b29f9edfedb6454e5db973c766290465b868ac8",
+      "validate-coverage-ledger.test.cjs": "cfb9df26b03469a4279a70e7664a2a5434dd6f8c2c204e91f9b0aeb9dd71e648",
+      "validate-findings.cjs": "e85f232e36bfac0f866f244da50376692d6b45c690beadcb00608b0e6c8b5283",
+      "validate-findings.test.cjs": "b92001117a92c4161d43777a0ba2fa182a8a4d97f2304cc8c0cee5331497b73b",
+      "VALIDATION-AND-REPORTING.md": "b892470cb89bb31f33403e050d4bdfbe2cdaef940ade1496fa65e32b2e129449",
+      "WEB-PROTOCOL-AND-AUTH.md": "4f3066dffa23c5635859187be9b96c32f2aff29a688186b91ff0c63e47d62b5c"
+    }
+  },
+  {
+    "id": "open-code-review",
+    "source": "C:\\Users\\30894\\.codex\\plugins\\cache\\open-code-review\\open-code-review-codex\\1.0.0\\skills\\open-code-review",
+    "license": "Apache-2.0",
+    "files": {
+      "SKILL.md": "916934dc1626090d63ef8bd213b7513df24fe7d2a6f2d6d2dfe7b3de8210b778",
+      "SOURCE.json": "4b4b8bf637e523d05c4fab10c5c9f63623fc35b4e84de48a8a50735e94c291c4"
+    }
+  }
+]

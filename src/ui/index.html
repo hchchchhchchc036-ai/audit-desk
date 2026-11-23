@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Audit Desk · 本地审计工作台</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./vendor/mermaid.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="global-header" aria-label="应用与计算机状态">
+    <div class="global-identity"><span class="global-logo" aria-hidden="true">&gt;_</span><div><div class="software-name">AUDIT DESK<span class="software-version">_V0.1.10</span></div><div class="software-subtitle">CODE AUDIT // SOFTWARE TESTING</div></div></div>
+    <div class="global-system"><div class="header-status"><span class="status-label">NET:</span><span id="header-network" title="操作系统联网状态；不代表已验证互联网可达">--</span></div><div class="header-status"><span class="status-label">PWR:</span><span id="header-power">--</span></div><div class="header-clock"><span class="clock-dot" aria-hidden="true"></span><time id="header-time" aria-label="本机时间">--:--:--</time><span id="header-date" class="header-date"></span></div></div>
+  </header>
+  <aside class="sidebar">
+    <a class="brand" href="#overview" aria-label="Audit Desk 总览"><pre class="brand-mark" aria-hidden="true">+--[ A/D ]--+
+| &gt;_ AUDIT |
++----------+</pre><span>Audit Desk<small>本地审计工作台</small></span></a>
+    <div class="nav-label">[ WORKSPACE / 工作空间 ]</div>
+    <nav aria-label="主导航" id="navigation"></nav>
+    <section class="system-monitor" aria-labelledby="monitor-title"><h2 id="monitor-title">SYSTEM_MONITOR</h2><div id="telemetry-content" aria-live="off"><p class="monitor-pending">[WAIT] 正在读取本机遥测…</p></div></section>
+    <div class="sidebar-note"><span class="local-dot"></span>本地索引 · 按需连接模型<p>项目、任务和报告保存在本机。模型调用前确认代码范围。</p></div>
+    <div class="sidebar-bottom">TTY: LOCAL <span>v0.1.10</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="project-context"><span class="folder-icon" aria-hidden="true">~/</span><div><span id="project-name">尚未选择项目</span><small id="project-path">选择文件夹，开始建立本地索引</small></div></div><div class="topbar-actions"><select id="project-select" aria-label="切换项目"></select><button id="open-context" class="button quiet">上下文</button><button id="manage-projects" class="button quiet">项目管理</button><button id="rescan-project" class="button quiet" disabled>重新索引</button><button id="import-project" class="button primary">选择项目文件夹</button></div></header>
+    <main id="main" tabindex="-1"><div class="loading">正在读取本地工作台…</div></main>
+    <footer class="footer"><span>本地工作空间 / 不自动修改源项目</span><span id="connection-status">正在加载</span></footer>
+  </div>
+
+<dialog id="projects-dialog" aria-labelledby="projects-title"><div class="dialog-head"><h2 id="projects-title">项目管理</h2><button id="close-projects" class="button quiet">关闭</button></div><p class="hint">从列表移除仅归档应用记录，源项目文件保留。</p><div id="projects-list"></div></dialog>
+<dialog id="context-dialog" aria-labelledby="context-title"><div class="dialog-head"><h2 id="context-title">项目上下文</h2><button id="close-context" class="button quiet">关闭</button></div><p id="context-project" class="hint"></p><div id="context-metadata" class="hint"></div><p class="hint">压缩将保留任务目标、证据与进度；重置先保存交接文档，再创建新上下文。</p><div class="inline-actions context-toolbar"><button id="compress-context" class="button">压缩上下文</button><button id="reset-context" class="button">重置上下文</button><button id="open-handoff" class="button quiet" hidden>打开交接文档</button></div></dialog>
+<dialog id="tool-dialog" aria-labelledby="tool-title"><div class="dialog-head"><h2 id="tool-title">容器命令工具</h2><button id="close-tool" class="button quiet">关闭</button></div><form id="tool-form" class="stack"><input id="tool-id" type="hidden"><label for="tool-name">名称</label><input id="tool-name" required maxlength="120"><label for="tool-description">用途</label><textarea id="tool-description" required></textarea><label for="tool-command">命令 · JSON 参数数组</label><textarea id="tool-command" required class="code-input" placeholder='["npm","test"]'></textarea><label for="tool-image">本地 Docker 镜像（可选）</label><input id="tool-image"><label class="choice"><input id="tool-enabled" type="checkbox" checked>启用工具</label><p class="hint">源项目只读、网络关闭，仅在 Docker 中执行。</p><button class="button primary" type="submit">保存工具</button></form></dialog>
+<dialog id="tool-run-dialog" aria-labelledby="tool-run-title"><div class="dialog-head"><h2 id="tool-run-title">运行工具</h2><button id="close-tool-run" class="button quiet">关闭</button></div><form id="tool-run-form" class="stack"><label for="tool-args">附加参数 · JSON 字符串数组</label><textarea id="tool-args" class="code-input">[]</textarea><button id="run-tool" class="button primary" type="submit">在当前项目执行</button></form><pre id="tool-result" tabindex="0" aria-live="polite">等待执行。</pre></dialog>
+  <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
+  <dialog id="skill-dialog" aria-labelledby="skill-dialog-title"><div class="dialog-head"><h2 id="skill-dialog-title">Skill 内容</h2><button class="button quiet" id="close-dialog">关闭</button></div><p class="muted">编辑应用内副本；保存后新任务使用新版本。</p><label for="skill-content">SKILL.md</label><textarea id="skill-content" class="code-input skill-editor" spellcheck="false"></textarea><div class="dialog-actions"><button class="button primary" id="save-skill">保存副本</button></div></dialog>
+</body>
+</html>

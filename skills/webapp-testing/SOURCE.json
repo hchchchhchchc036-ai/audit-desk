@@ -1,0 +1,9 @@
+{
+  "id": "webapp-testing",
+  "repo": "anthropics/skills",
+  "path": "skills/webapp-testing",
+  "sha": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+  "source": "https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/webapp-testing",
+  "license": "Apache-2.0",
+  "repositoryStars": 193256
+}
